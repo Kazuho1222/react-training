@@ -1,0 +1,27 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.item:hover {
+  background: #f7f7f7;
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.input:focus {
+  outline: 2px solid #4f46e5;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
