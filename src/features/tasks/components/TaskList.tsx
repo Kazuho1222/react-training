@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import styles from "./TaskList.module.css";
-import type { Task } from "./types";
+import type { Task } from "../types/types";
 import { TaskItem } from "./TaskItem";
-import { mockTasks } from "./mockTasks";
+import { mockTasks } from "../mock/mockTasks";
 
 // const [isSaving, setIsSaving] = useState(false);
 

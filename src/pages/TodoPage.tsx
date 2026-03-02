@@ -1,5 +1,5 @@
-import { TaskForm } from "../features/tasks/TaskForm";
-import { TaskList } from "../features/tasks/TaskList";
+import { TaskForm } from "../features/tasks/components/TaskForm";
+import { TaskList } from "../features/tasks/components/TaskList";
 import styles from "./TodoPage.module.css";
 
 export const TodoPage = () => {

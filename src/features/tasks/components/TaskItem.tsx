@@ -1,4 +1,4 @@
-import type { Task } from "./types";
+import type { Task } from "../types/types";
 import styles from "./TaskItem.module.css";
 
 type Props = {
