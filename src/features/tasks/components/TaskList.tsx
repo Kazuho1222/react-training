@@ -1,10 +1,12 @@
 import styles from "./TaskList.module.css";
 import type { Task } from "../types/types";
 import { TaskItem } from "./TaskItem";
+import { useTasks } from "../context/useTasks";
 
 // const [isSaving, setIsSaving] = useState(false);
 
-export const TaskList = ({ tasks }: { tasks: Task[] }) => {
+export const TaskList = () => {
+	const { tasks } = useTasks();
 	return (
 		<div className={styles.container}>
 			<ul>
