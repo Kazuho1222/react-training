@@ -8,7 +8,7 @@ type Props = {
 
 export const TaskItem = ({ task, onToggle }: Props) => {
 	return (
-		<li>
+		<div className={styles.item}>
 			<input
 				type="checkbox"
 				checked={task.completed}
@@ -19,6 +19,6 @@ export const TaskItem = ({ task, onToggle }: Props) => {
 			>
 				{task.title}
 			</span>
-		</li>
+		</div>
 	);
 };
