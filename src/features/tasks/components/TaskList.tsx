@@ -12,13 +12,7 @@ export const TaskList = () => {
 			<ul>
 				{tasks.map((task: Task) => (
 					<div className={styles.item} key={task.id}>
-						<TaskItem
-							key={task.id}
-							task={task}
-							onToggle={(id: number) => {
-								console.log("toggle task", id);
-							}}
-						/>
+						<TaskItem key={task.id} task={task} />
 					</div>
 				))}
 			</ul>

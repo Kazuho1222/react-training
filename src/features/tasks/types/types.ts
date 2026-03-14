@@ -7,7 +7,7 @@ export type Task = {
 
 // ② Action 型（Reducer用）
 export type TaskAction =
-	| { type: "ADD_TASK"; payload: string }
+	| { type: "ADD_TASK"; payload: Task }
 	| { type: "TOGGLE_TASK"; payload: number }
 	| { type: "DELETE_TASK"; payload: number };
 
@@ -16,8 +16,9 @@ export type TaskState = {
 	tasks: Task[];
 };
 
-// ④ Context 型
+// ④ Context 型（Provider が渡す value に合わせる）
 export type TaskContextType = {
-	state: TaskState;
-	dispatch: React.Dispatch<TaskAction>;
+	tasks: Task[];
+	addTask: (title: string) => void;
+	toggleTask: (id: number) => void;
 };

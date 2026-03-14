@@ -1,5 +1,20 @@
 # Daily Development Log
 
+## 2026-03-14
+
+### Yesterday
+- Task Context Setup
+
+### Today
+- useReducer Implementation
+
+### Blockers
+- 型定義エラー
+
+### Learnings
+- useReducer の使い方
+
+---
 ## 2026-03-08
 
 ### Yesterday

@@ -1,18 +1,20 @@
+import { useTasks } from "../context/useTasks";
 import type { Task } from "../types/types";
 import styles from "./TaskItem.module.css";
 
 type Props = {
 	task: Task;
-	onToggle: (id: number) => void;
 };
 
-export const TaskItem = ({ task, onToggle }: Props) => {
+export const TaskItem = ({ task }: Props) => {
+	const { toggleTask } = useTasks();
+
 	return (
 		<div className={styles.item}>
 			<input
 				type="checkbox"
 				checked={task.completed}
-				onChange={() => onToggle(task.id)}
+				onChange={() => toggleTask(task.id)}
 			/>
 			<span
 				className={`${styles.title} ${task.completed ? styles.completed : ""}`}
