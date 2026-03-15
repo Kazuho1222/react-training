@@ -11,9 +11,9 @@ export const TaskList = () => {
 		<div className={styles.container}>
 			<ul>
 				{tasks.map((task: Task) => (
-					<div className={styles.item} key={task.id}>
-						<TaskItem key={task.id} task={task} />
-					</div>
+					<li className={styles.item} key={task.id}>
+						<TaskItem task={task} />
+					</li>
 				))}
 			</ul>
 		</div>
