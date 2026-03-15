@@ -14,9 +14,7 @@ export const TaskItem = ({ task }: Props) => {
 			<input
 				type="checkbox"
 				checked={task.completed}
-				onChange={() => {
-					toggleTask(task.id);
-				}}
+				onChange={() => toggleTask(task.id)}
 			/>
 			<span
 				className={`${styles.title} ${task.completed ? styles.completed : ""}`}
