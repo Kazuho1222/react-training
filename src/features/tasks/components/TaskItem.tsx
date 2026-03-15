@@ -9,15 +9,13 @@ type Props = {
 export const TaskItem = ({ task }: Props) => {
 	const { toggleTask } = useTasks();
 
+	const handleToggle = () => {
+		toggleTask(task.id);
+	};
+
 	return (
 		<div className={styles.item}>
-			<input
-				type="checkbox"
-				checked={task.completed}
-				onChange={() => {
-					toggleTask(task.id);
-				}}
-			/>
+			<input type="checkbox" checked={task.completed} onChange={handleToggle} />
 			<span
 				className={`${styles.title} ${task.completed ? styles.completed : ""}`}
 			>
