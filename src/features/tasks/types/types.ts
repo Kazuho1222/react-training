@@ -21,4 +21,5 @@ export type TaskContextType = {
 	tasks: Task[];
 	addTask: (title: string) => void;
 	toggleTask: (id: number) => void;
+	deleteTask: (id: number) => void;
 };

@@ -19,6 +19,10 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 		dispatch({ type: "ADD_TASK", payload: newTask });
 	};
 
+	const deleteTask = (id: number) => {
+		dispatch({ type: "DELETE_TASK", payload: id });
+	};
+
 	const toggleTask = (id: number) => {
 		dispatch({ type: "TOGGLE_TASK", payload: id });
 	};
@@ -27,6 +31,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 		tasks,
 		addTask,
 		toggleTask,
+		deleteTask,
 	};
 
 	return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;

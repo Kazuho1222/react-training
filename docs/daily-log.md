@@ -1,5 +1,21 @@
 # Daily Development Log
 
+## 2026-03-15
+
+### Yesterday
+- useReducer Implementation
+
+### Today
+- Delete Task
+
+### Blockers
+- Typeエラー
+
+### Learnings
+- buttonには明示的にtypeを付ける
+
+---
+
 ## 2026-03-14
 
 ### Yesterday

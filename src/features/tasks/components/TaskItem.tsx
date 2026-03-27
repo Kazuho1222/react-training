@@ -7,10 +7,14 @@ type Props = {
 };
 
 export const TaskItem = ({ task }: Props) => {
-	const { toggleTask } = useTasks();
+	const { toggleTask, deleteTask } = useTasks();
 
 	const handleToggle = () => {
 		toggleTask(task.id);
+	};
+
+	const handleDelete = () => {
+		deleteTask(task.id);
 	};
 
 	return (
@@ -21,6 +25,9 @@ export const TaskItem = ({ task }: Props) => {
 			>
 				{task.title}
 			</span>
+			<button type="button" onClick={handleDelete}>
+				削除
+			</button>
 		</div>
 	);
 };
