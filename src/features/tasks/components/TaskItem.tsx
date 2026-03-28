@@ -56,7 +56,9 @@ export const TaskItem = ({ task }: Props) => {
 						ref={inputRef}
 						type="text"
 						value={editText}
-						onChange={(e) => setEditText(e.target.value)}
+						onChange={(e) => {
+							setEditText(e.target.value);
+						}}
 						className={styles.title}
 					/>
 				) : (
