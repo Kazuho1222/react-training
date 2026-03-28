@@ -7,7 +7,7 @@ import { useTasks } from "../context/useTasks";
 
 export const TaskList = () => {
 	const { tasks } = useTasks();
-	return (
+	return tasks.length > 0 ? (
 		<div className={styles.container}>
 			<ul>
 				{tasks.map((task: Task) => (
@@ -17,5 +17,7 @@ export const TaskList = () => {
 				))}
 			</ul>
 		</div>
+	) : (
+		<div className={styles.emptyMessage}>タスクがありません。</div>
 	);
 };

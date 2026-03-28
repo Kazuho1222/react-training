@@ -27,10 +27,15 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
 		dispatch({ type: "TOGGLE_TASK", payload: id });
 	};
 
+	const editTask = (id: number, title: string) => {
+		dispatch({ type: "EDIT_TASK", payload: { id, title } });
+	};
+
 	const value = {
 		tasks,
 		addTask,
 		toggleTask,
+		editTask,
 		deleteTask,
 	};
 

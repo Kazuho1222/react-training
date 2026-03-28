@@ -9,6 +9,7 @@ export type Task = {
 export type TaskAction =
 	| { type: "ADD_TASK"; payload: Task }
 	| { type: "TOGGLE_TASK"; payload: number }
+	| { type: "EDIT_TASK"; payload: { id: number; title: string } }
 	| { type: "DELETE_TASK"; payload: number };
 
 // ③ State 型
@@ -21,5 +22,6 @@ export type TaskContextType = {
 	tasks: Task[];
 	addTask: (title: string) => void;
 	toggleTask: (id: number) => void;
+	editTask: (id: number, title: string) => void;
 	deleteTask: (id: number) => void;
 };
